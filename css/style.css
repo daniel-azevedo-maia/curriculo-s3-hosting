@@ -3,33 +3,56 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: #f0f0f0;  /* Fundo claro para leitura confortável */
-    color: #2C3E50;  /* Azul escuro para texto */
+    background: #f0f0f0;
+    color: #333;
     line-height: 1.6;
-    overflow-x: hidden;  /* Impede rolagem horizontal */
+    overflow-x: hidden;
 }
 
 /* Estilos do cabeçalho */
 header {
-    background: #ffffff;
-    color: #2C3E50;
+    background: linear-gradient(to right, #2980b9, #2c3e50); /* Gradiente de azul */
+    color: #ffffff;
     text-align: center;
-    padding: 40px 20px;  /* Ajuste para todos os dispositivos */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px 20px; /* Reduzido para um impacto mais elegante */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative; /* Permite o posicionamento absoluto dos elementos dentro */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2rem;  /* Reduzido para melhor visualização em mobile */
-    color: #3498DB;  /* Azul claro */
+    font-size: 2.2rem; /* Tamanho adequado para grande impacto visual */
+    letter-spacing: 1px; /* Espaçamento das letras para uma aparência mais sofisticada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra no texto para destaque */
 }
 
 header p {
-    font-size: 1.0rem;  /* Menor para dispositivos menores */
+    font-size: 1.1rem; /* Tamanho otimizado para legibilidade */
     margin-top: 5px;
-    color: #7F8C8D;  /* Cinza para subtítulo */
-    font-weight: 400;
+    opacity: 0.9; /* Opacidade para um efeito sutil */
 }
+
+/* Responsividade e Ajustes para Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px; /* Mais compacto para dispositivos móveis */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Tamanho reduzido para adaptação em telas menores */
+    }
+
+    header p {
+        font-size: 0.95rem; /* Tamanho ajustado para a legibilidade em dispositivos móveis */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem; /* Ainda menor para telas de smartphones */
+    }
+}
+
 
 /* Estilos das seções */
 section {
@@ -67,22 +90,34 @@ ul li:hover {
 }
 
 /* Estilos de artigo dentro das experiências */
+article {
+    margin-bottom: 20px; /* Espaçamento entre artigos */
+    padding: 20px; /* Padding para espaço interno */
+    background-color: #f8f9fa; /* Fundo claro para o artigo inteiro */
+    border-radius: 8px; /* Bordas arredondadas para suavidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+}
+
 article h3 {
-    color: #2C3E50;
-    font-weight: 600;
+    background-color: #34495e; /* Fundo azul escuro para o título */
+    color: white; /* Texto branco para contraste */
+    padding: 10px 15px; /* Padding adequado */
+    border-radius: 6px; /* Bordas arredondadas no título */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra mais definida para o título */
 }
 
 article h4 {
-    font-weight: 500;
-    color: #7F8C8D;
-    margin-top: 0;
-    margin-bottom: 10px;
+    font-weight: 400;
+    color: #7f8c8d; /* Cor suave para as datas */
+    margin-top: 5px; /* Espaço reduzido após o título */
+    margin-bottom: 15px;
 }
 
 article p {
     text-align: justify;
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Tamanho confortável para leitura */
 }
+
 
 /* Estilos do rodapé */
 footer {
