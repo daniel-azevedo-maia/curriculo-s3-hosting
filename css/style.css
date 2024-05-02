@@ -1,0 +1,120 @@
+/* Reset básico e configurações gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fafafa;  /* Um cinza mais claro e suave */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;  /* Evita rolagem horizontal indesejada */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;  /* Ligeiramente reduzido para equilíbrio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra mais sutil */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;  /* Tamanho ligeiramente reduzido */
+    color: #4A90E2;  /* Mantendo o azul suave */
+}
+
+header p {
+    font-size: 1.2rem;  /* Tamanho ajustado para melhor leitura */
+    margin-top: 5px;  /* Espaçamento superior reduzido */
+    color: #666;
+    font-weight: 400;  /* Peso da fonte normalizado */
+}
+
+/* Estilos das seções */
+section {
+    margin: 25px auto;
+    max-width: 800px;
+    background: #fff;
+    padding: 25px;  /* Espaçamento interno ajustado */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);  /* Sombra mais leve */
+}
+
+h2 {
+    color: #4A90E2;
+    font-size: 1.75rem;  /* Tamanho ligeiramente reduzido */
+    border-bottom: 1px solid #e8e8e8;  /* Linha mais fina */
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    margin: 8px 0;  /* Margens ajustadas */
+    padding: 10px 15px;  /* Padding ajustado */
+    border-left: 4px solid #4A90E2;  /* Borda mais estreita */
+    transition: all 0.2s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #f8f8f8;  /* Mudança de cor mais sutil */
+    transform: translateX(5px);  /* Efeito sutil ao passar o mouse */
+}
+
+/* Estilos de artigo dentro das experiências */
+article h3 {
+    color: #333;
+    font-weight: 600;  /* Peso da fonte ajustado */
+}
+
+article h4 {
+    font-weight: 400;
+    color: #888;
+    margin-top: 0;  /* Reduzido para mais coesão */
+    margin-bottom: 10px;
+}
+
+article p {
+    text-align: justify;
+    font-size: 0.95rem;  /* Redução para refinamento */
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;  /* Cor mais escura para contraste */
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.0rem;  /* Tamanho ajustado */
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;  /* Peso ajustado para destaque moderado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header, section, footer {
+        width: 96%;  /* Ajuste para maior aproveitamento da tela */
+        margin: 8px auto;  /* Ajuste nas margens para consistência */
+    }
+
+    header h1 {
+        font-size: 2.0rem;  /* Reduzido para adequação em dispositivos móveis */
+    }
+
+    h2 {
+        font-size: 1.5rem;  /* Ajuste para títulos nas seções */
+    }
+}
