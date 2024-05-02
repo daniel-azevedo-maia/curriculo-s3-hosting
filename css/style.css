@@ -3,49 +3,49 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: #fafafa;  /* Um cinza mais claro e suave */
-    color: #333;
+    background: #f0f0f0;  /* Fundo claro para leitura confortável */
+    color: #2C3E50;  /* Azul escuro para texto */
     line-height: 1.6;
-    overflow-x: hidden;  /* Evita rolagem horizontal indesejada */
+    overflow-x: hidden;  /* Impede rolagem horizontal */
 }
 
 /* Estilos do cabeçalho */
 header {
     background: #ffffff;
-    color: #333;
+    color: #2C3E50;
     text-align: center;
-    padding: 50px 20px;  /* Ligeiramente reduzido para equilíbrio */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Sombra mais sutil */
+    padding: 40px 20px;  /* Ajuste para todos os dispositivos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;  /* Tamanho ligeiramente reduzido */
-    color: #4A90E2;  /* Mantendo o azul suave */
+    font-size: 2.2rem;  /* Reduzido para melhor visualização em mobile */
+    color: #3498DB;  /* Azul claro */
 }
 
 header p {
-    font-size: 1.2rem;  /* Tamanho ajustado para melhor leitura */
-    margin-top: 5px;  /* Espaçamento superior reduzido */
-    color: #666;
-    font-weight: 400;  /* Peso da fonte normalizado */
+    font-size: 1.0rem;  /* Menor para dispositivos menores */
+    margin-top: 5px;
+    color: #7F8C8D;  /* Cinza para subtítulo */
+    font-weight: 400;
 }
 
 /* Estilos das seções */
 section {
-    margin: 25px auto;
+    margin: 20px auto;
     max-width: 800px;
-    background: #fff;
-    padding: 25px;  /* Espaçamento interno ajustado */
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);  /* Sombra mais leve */
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 h2 {
-    color: #4A90E2;
-    font-size: 1.75rem;  /* Tamanho ligeiramente reduzido */
-    border-bottom: 1px solid #e8e8e8;  /* Linha mais fina */
+    color: #3498DB;
+    font-size: 1.6rem;  /* Levemente reduzido para melhor adaptação */
+    border-bottom: 2px solid #BDC3C7;  /* Linha cinza claro */
     padding-bottom: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 ul {
@@ -54,67 +54,86 @@ ul {
 }
 
 ul li {
-    background: #fff;
-    margin: 8px 0;  /* Margens ajustadas */
-    padding: 10px 15px;  /* Padding ajustado */
-    border-left: 4px solid #4A90E2;  /* Borda mais estreita */
-    transition: all 0.2s ease-in-out;
+    background: #ECF0F1;  /* Fundo muito claro */
+    margin: 8px 0;
+    padding: 10px;
+    border-left: 5px solid #3498DB;  /* Borda azul claro */
+    transition: all 0.3s ease-in-out;
 }
 
 ul li:hover {
-    background-color: #f8f8f8;  /* Mudança de cor mais sutil */
-    transform: translateX(5px);  /* Efeito sutil ao passar o mouse */
+    background-color: #D6DBDF;  /* Mudança sutil de cor ao interagir */
+    transform: translateX(10px);
 }
 
 /* Estilos de artigo dentro das experiências */
 article h3 {
-    color: #333;
-    font-weight: 600;  /* Peso da fonte ajustado */
+    color: #2C3E50;
+    font-weight: 600;
 }
 
 article h4 {
-    font-weight: 400;
-    color: #888;
-    margin-top: 0;  /* Reduzido para mais coesão */
+    font-weight: 500;
+    color: #7F8C8D;
+    margin-top: 0;
     margin-bottom: 10px;
 }
 
 article p {
     text-align: justify;
-    font-size: 0.95rem;  /* Redução para refinamento */
+    font-size: 0.9rem;
 }
 
 /* Estilos do rodapé */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #333;  /* Cor mais escura para contraste */
+    padding: 15px 0;
+    background: #2C3E50;  /* Azul escuro para contraste */
     color: white;
 }
 
 footer p {
     margin: 0;
-    font-size: 1.0rem;  /* Tamanho ajustado */
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #FFF;
+    color: #3498DB;  /* Azul claro */
     text-decoration: none;
-    font-weight: 500;  /* Peso ajustado para destaque moderado */
+    font-weight: 500;
 }
 
-/* Responsividade */
+/* Responsividade e media queries */
 @media (max-width: 768px) {
     header, section, footer {
-        width: 96%;  /* Ajuste para maior aproveitamento da tela */
-        margin: 8px auto;  /* Ajuste nas margens para consistência */
+        width: 95%;
+        margin: 10px auto;
     }
 
     header h1 {
-        font-size: 2.0rem;  /* Reduzido para adequação em dispositivos móveis */
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.5rem;  /* Ajuste para títulos nas seções */
+        font-size: 1.4rem;
+    }
+
+    article p, footer p {
+        font-size: 0.85rem;  /* Texto menor para legibilidade em telas pequenas */
+    }
+}
+
+/* Efeitos visuais para mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    h2, article h3 {
+        font-size: 1.3rem;  /* Ajustes para uma visualização mais clara em mobile */
+    }
+
+    ul li:hover {
+        transform: none;  /* Desativa movimento em mobile para evitar layout quebrado */
     }
 }
