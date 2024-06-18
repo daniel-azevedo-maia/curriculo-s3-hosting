@@ -36,36 +36,10 @@ header p {
     box-sizing: border-box; /* Assegura que o padding não afete a largura total */
 }
 
-/* Responsividade e Ajustes para Mobile */
-@media (max-width: 768px) {
-    header {
-        padding: 20px 15px; /* Mais compacto para dispositivos móveis */
-    }
-
-    header h1, header p {
-        font-size: 1.8rem; /* Tamanho reduzido para cabeçalho */
-        padding: 0 15px; /* Ajusta padding para evitar overflow */
-    }
-
-    header p {
-        font-size: 0.95rem; /* Tamanho ajustado para descrição */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.6rem; /* Ainda menor para telas de smartphones */
-    }
-
-    header p {
-        font-size: 0.9rem; /* Reduzido para melhor leitura em smartphones */
-    }
-}
-
 /* Estilos das seções */
 section {
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1000px;
     background: #ffffff;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
@@ -133,6 +107,18 @@ article p {
     font-size: 0.95rem; /* Tamanho confortável para leitura */
 }
 
+/* Layout de duas colunas */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+}
+
 /* Estilos do rodapé */
 footer {
     text-align: center;
@@ -165,6 +151,10 @@ footer a {
 
     article p, footer p {
         font-size: 0.85rem;  /* Texto menor para legibilidade em telas pequenas */
+    }
+
+    #content {
+        flex-direction: column;
     }
 }
 
