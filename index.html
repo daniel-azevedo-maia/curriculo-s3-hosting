@@ -1,273 +1,599 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Azevedo</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="img/daniel.jpg">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Daniel Azevedo</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>Daniel Azevedo de Oliveira Maia</h1>
-            <p>Desenvolvedor de Software</p>
-        </div>
-    </header>
-    <main>
-        <section id="objectives">
-            <h2>Objetivos</h2>
-            <p>Contribuir com meu conhecimento em desenvolvimento de software e proteção de dados, atuando em projetos inovadores que agreguem valor e ofereçam soluções tecnológicas eficientes, seguras e escaláveis. Pretendo trabalhar em empresas, entidades, órgãos públicos e outras organizações, sempre buscando oportunidades para aplicar minhas habilidades técnicas e crescer profissionalmente em um ambiente colaborativo.</p>
-        </section>        
-        <section id="content">
-            <div class="column">
-                <section id="resume">
-                    <h2>Resumo Profissional</h2>
-                    <p>Sou um profissional da área de tecnologia, com foco em desenvolvimento de software e proteção de dados. Sempre em busca do crescimento, procuro me atualizar, estudar e aprender com as melhores práticas do mercado, a fim de entregar um serviço/produto de qualidade, eficiente, seguro e escalável.</p>
-                </section>
-                <section id="skills">
-                    <h2>Habilidades Técnicas</h2>
-                    <ul>
-                        <li>Experiência com Java, abrangendo o ecossistema Jakarta EE (anteriormente J2EE), incluindo JPA/Hibernate, Spring, EJBs, desenvolvimento com JSP/Servlets e Thymeleaf. Familiaridade com sistemas legados em Java.</li>
-                        <li>Experiência prática em Python e Django.</li>
-                        <li>Experiência prática com NestJS e NodeJS.</li>
-                        <li>Experiência prática com ferramentas para testes de API, incluindo Postman e Insomnia.</li>
-                        <li>Experiência prática em HTML, CSS, JavaScript, TypeScript, Angular e Bootstrap. Habilidade no uso de Angular CLI para facilitar o desenvolvimento de aplicações front-end.</li>
-                        <li>Experiência com SQL e sistemas de gerenciamento de banco de dados como MySQL e PostgreSQL. Experiência também com MongoDB.</li>
-                        <li>Experiência com Git e Github/Gitlab para versionamento de código.</li>
-                        <li>Uso de Docker para contêinerização e Maven para gerenciamento de projetos Java. Uso de pip para gerenciamento de pacotes Python.</li>
-                        <li>Experiência com ferramentas de gerenciamento de projetos como Trello, Jira e Slack.</li>
-                        <li>Conhecimentos práticos de Machine Learning e IA</li>
-                        <li>Conhecimento prático de ferramentas como Pandas e Numpy</li>
-                        <li>Base sólida em Matemática e Lógica</li>
-                        <li>Base sólida em Estruturas de Dados</li>
-                    </ul>
-                </section>
-            </div>
-            <div class="column">
-                <section id="experience">
-                    <h2>Experiência Profissional</h2>
-                    <article>
-                        <h3>Estagiário na Justiça Federal na Paraíba (JFPB)</h3>
-                        <h4>Abril/2022 a Junho/2023</h4>
-                        <p>Participei de atividades relacionadas à realização de audiências no Metaverso, uma iniciativa inovadora que resultou na primeira audiência judiciária do Brasil em um ambiente imersivo. Contribuí com suporte e desenvolvimento em sistemas internos, utilizando Django, e desenvolvi robôs automatizados em Python com Selenium para processos na plataforma Processo Judicial Eletrônico (PJe). Também trabalhei com automação web em Java para a coleta de dados nas plataformas de dados da JFPB.</p>
-                    </article>
-                    <article>
-                        <h3>Estagiário no Grupo Elfa</h3>
-                        <h4>Agosto/2023 — Dezembro/2023</h4>
-                        <p>Trabalhei no desenvolvimento de um portal de administração, utilizando Angular para o front-end e NestJS para o back-end. Implementei funções serverless com AWS Lambda e MongoDB para gerenciamento de dados. Aprofundei conhecimentos em APIs, JSON, autenticação JWT, Typescript, e práticas de segurança em HTTP.</p>
-                    </article>
-                    <article>
-                        <h3>Desenvolvedor Java na Datainfo</h3>
-                        <h4>Dezembro/2023 a Maio/2024</h4>
-                        <p>Fui responsável por auxiliar no desenvolvimento de um sistema monolítico legado, no âmbito da SEFAZ-PB, utilizando J2EE com arquitetura MVC, JSP, Servlets, e o servidor de aplicação JBoss, além de diversas tecnologias como SQL e Eclipse.</p>
-                    </article>
-                    <article>
-                        <h3>Diretor de Desenvolvimento da Unidade Municipal de Tecnologia da Informação - Município de João Pessoa/PB</h3>
-                        <h4>Abril/2024 - atual</h4>
-                        <p>Gerenciar e liderar projetos de inovação tecnológica, desenvolvendo plataformas utilizando Apex com PL/SQL, Java e Spring.</p>
-                    </article>
-                </section>
-                <section id="academic">
-                    <h2>Experiência Acadêmica</h2>
-                    <p>Por três vezes, fui monitor em disciplinas de Programação de Computadores e Programação Orientada a Objetos, reforçando não só minhas habilidades técnicas, mas também minha capacidade de ensinar e transmitir conhecimentos. Estudante ativo e comprometido no curso de Ciência da Computação, sempre buscando aprofundar minha compreensão teórica e prática.</p>
-                </section>
-                <section id="certifications">
-                    <h2>Competências Linguísticas e Certificações</h2>
-                    <p>Conhecimentos avançados em Inglês e Espanhol, com especial destaque para leitura e compreensão de documentações técnicas. Aprendendo italiano (muito básico).</p>
-                    <h2>Certificações</h2>
-                    <ul>
-                        <li>EXIN Privacy & Data Protection Essentials based on LGPD</li>
-                        <li>EXIN Privacy and Data Protection Foundation</li>
-                        <li>Information Security Foundation based on ISO IEC 27001</li>
-                        <li>EXIN Privacy and Data Protection Practitioner</li>
-                        <li>EXIN BCS Artificial Intelligence Essentials</li>
-                    </ul>
-                    <h2>Certificados de cursos concluídos</h2>
-                    <ul>
-                        <li>
-                            <strong>Testes Unitários com JUnit</strong> - AlgaWorks<br>
-                            <small>Verificação emitida em ago de 2024</small><br>
-                            <small>Código da credencial: X5D1I9IBWH</small><br>
-                            <a href="https://app.algaworks.com/certs/X5D1I9IBWH">Exibir credencial</a><br>
-                            <small>Competências: Testes unitários em Java com JUnit</small>
-                        </li>
-                        <li>
-                            <strong>Curso de Docker Completo - Do Zero ao Avançado</strong> - Udemy<br>
-                            <small>Verificação emitida em jul de 2024</small><br>
-                            <small>Código da credencial: UC-071a5401-0449-442c-8592-24de6b0d0718</small><br>
-                            <a href="https://www.udemy.com/certificate/UC-071a5401-0449-442c-8592-24de6b0d0718/">Exibir credencial</a><br>
-                            <small>Competências: criação de imagens, containers, dockerfiles, docker-compose, redes Docker, entre outros</small>
-                        </li>
-                        <li>
-                            <strong>Advanced Learning Algorithms</strong> - DeepLearning.AI/Coursera<br>
-                            <small>Verificação emitida em set de 2024</small><br>
-                            <small>Código da credencial: 7M0R86RJST7H</small><br>
-                            <a href="https://www.coursera.org/account/accomplishments/records/7M0R86RJST7H">Exibir credencial</a><br>
-                            <small>Competências: TensorFlow, fundamentos matemáticos das redes neurais artificiais, vetorização, funções de ativação, classificação multiclasse, viés e variância, árvores de decisão, métodos de ensemble e XGBoost</small>
-                        </li>
-                        <li>
-                            <strong>Supervised Machine Learning: Regression and Classification</strong> - DeepLearning.AI/Coursera<br>
-                            <small>Verificação emitida em jun de 2024</small><br>
-                            <small>Código da credencial: 9VMZDE97BMWY</small><br>
-                            <a href="https://www.coursera.org/account/accomplishments/verify/9VMZDE97BMWY">Exibir credencial</a><br>
-                            <small>Competências: Aprendizado de máquina, Regressão linear, Modelos de regressão, Classificação de dados, Algoritmos de aprendizado de máquina, Aprendizado supervisionado, Regressão logística</small>
-                        </li>
-                        <li>
-                            <strong>AI For Everyone</strong> - DeepLearning.AI<br>
-                            <small>Verificação emitida em jul de 2024</small><br>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/S6YCGFQLGEEH">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Intro to Machine Learning</strong> - Kaggle<br>
-                            <small>Verificação emitida em jun de 2024</small><br>
-                            <a href="https://www.kaggle.com/learn/certification/danielazevedomaia/intro-to-machine-learning">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Certificado de Participação - FEPRO2023-Realizadores</strong> - Even3<br>
-                            <small>Verificação emitida em out de 2023</small><br>
-                            <small>Código da credencial: 80097908.5164824.7.0.8896984531742768</small><br>
-                            <small>Competências: JavaScript, Lógica de programação, Ciência da computação, Algoritmos</small>
-                        </li>
-                        <li>
-                            <strong>Certificado de Participação - Projetos 2023.1 Fábrica de Software do UBTech Office/UNIPÊ</strong> - Even3<br>
-                            <small>Verificação emitida em ago de 2023</small><br>
-                            <small>Código da credencial: 80796701.5164824.7.0.8691683531742768</small><br>
-                            <a href="https://link-da-credencial">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Persistência com Spring Data + JPA</strong> - JDev Treinamento<br>
-                            <small>Verificação emitida em abr de 2023</small><br>
-                            <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$mv8bvxG2">Exibir credencial</a><br>
-                            <small>Competências: Spring Data JPA, JPQL</small>
-                        </li>
-                        <li>
-                            <strong>Projeto de extensão Fábrica de Software</strong> - Fábrica de Software UBTech Office/Unipê<br>
-                            <a href="https://www.even3.com.br/documentos/imprimir?i=80796701.5164824.7.0.8691683531742768&cc=3c361fc5-833e-451c-bb4e-2abd35d5ad74">Exibir credencial</a><br>
-                            <small>Verificação emitida em abr de 2023</small>
-                        </li>
-                        <li>
-                            <strong>Spring Boot REST API com JavaScript e Bootstrap</strong> - JDev Treinamento<br>
-                            <small>Verificação emitida em abr de 2023</small><br>
-                            <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$qFGpGagO">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Workshop de Desenvolvimento Back End</strong> - Fábrica de Software UBTech Office/Unipê<br>
-                            <small>Verificação emitida em mar de 2023</small><br>
-                            <small>Competências: Django, Django REST Framework, Python</small>
-                        </li>
-                        <li>
-                            <strong>API com Django 3: Django Rest Framework</strong> - Alura<br>
-                            <small>Verificação emitida em fev de 2023</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/e4ef1f93-8aa3-4b22-82b4-c70ce66dfa52">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Django: templates e boas práticas</strong> - Alura<br>
-                            <small>Verificação emitida em fev de 2023</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/a68bf339-9d2e-4a2c-b8d9-750c6afbf59c">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Spring Boot 3: desenvolva uma API Rest em Java</strong> - Alura<br>
-                            <small>Verificação emitida em jan de 2023</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/41854eca-8c9c-4b28-88aa-1bc7b3667742">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Django: modelo, rotas e views</strong> - Alura<br>
-                            <small>Verificação emitida em out de 2022</small><br>
-                            <small>Código da credencial: 74abea85-eeb7-41f4-9d00-ad1e316b5ced</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/74abea85-eeb7-41f4-9d00-ad1e316b5ced">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Arquitetura de computadores: por trás de como seu programa funciona</strong> - Alura<br>
-                            <small>Verificação emitida em set de 2022</small><br>
-                            <small>Código da credencial: 37b0a1ed-3481-478d-90f4-631418eba24d</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/37b0a1ed-3481-478d-90f4-631418eba24d">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>HTTP: Entendendo a web por baixo dos panos</strong> - Alura<br>
-                            <small>Verificação emitida em set de 2022</small><br>
-                            <small>Código da credencial: 9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d</small><br>
-                            <a href="https://cursos.alura.com.br/certificate/9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Modelagem de banco de dados: entidades, relacionamentos e atributos</strong> - Alura<br>
-                            <small>Verificação emitida em set de 2022</small><br>
-                            <small>Código da credencial: 8d3c1d9b-ab1c-4f82-a93f-ce26a39eba55</small><br>
-                            <a href="https://link-da-credencial">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Certificado de Participação - CERTIFICADO Imersão 2022.1 Fábrica de Software Unipê</strong> - Even3<br>
-                            <small>Verificação emitida em mai de 2022</small><br>
-                            <small>Código da credencial: 8373253.5164824.7.0.010560672385319</small><br>
-                            <a href="https://www.even3.com.br/documentos/imprimir?i=8373253.5164824.7.0.010560672385319&cc=114848FA-CF4F-4F2F-BFF4-7E6578691B35">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Certificado de autoridade: Java</strong> - DevMedia<br>
-                            <small>Verificação emitida em mar de 2022</small><br>
-                            <a href="https://www.devmedia.com.br/certificado/tecnologia/java/daniel-azevedo-de-oliveira-maia-1">Exibir credencial</a>
-                        </li>
-                        <li>
-                            <strong>Linguagem C, O Curso Definitivo - 46 horas</strong> - WR KITS<br>
-                            <small>Verificação emitida em mar de 2022</small>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </section>
-        <section id="youtube-videos">
-            <h2>Minhas Aulas no YouTube</h2>
-            <div class="video-cards">
-                <div class="card">
-                    <h3>Tutorial Completo de Git e GitHub (parte 1)</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/K0t5CZ-xmks" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Tutorial Completo de Git e GitHub (parte 2)</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/yMMwcGxzJlc" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Sistemas Operacionais</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Suks4egpfUc" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Memórias</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/CnMfqBCugPA" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Processadores</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/pgJOG0HNERw" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Ponteiros na linguagem C</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/n5HwXbbc7_c" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Medidas de Dados e Conversões: Bits, Bytes e Sistemas Numéricos</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/YwxRub2E_4Q" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Resolvendo o Exercício 'Subarray Sum Equals K' do Leetcode</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QB-ZQxls7Pg" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="card">
-                    <h3>Resolvendo o Exercício 'Valid Palindrome' do Leetcode</h3>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/XJSUkgfgkWs" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Contato: <a href="mailto:daniel.azevedo.maia@hotmail.com">daniel.azevedo.maia@hotmail.com</a></p>
-        <p>
-            <a href="https://www.linkedin.com/in/daniel-azevedo-maia/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> | 
-            <a href="https://github.com/daniel-azevedo-maia" target="_blank"><i class="fab fa-github"></i> GitHub</a> | 
-            <a href="https://api.whatsapp.com/send?phone=5583988887116" target="_blank"><i class="fab fa-whatsapp"></i> +55 83 98888-7116</a> |
-            <a href="https://www.youtube.com/@daniel-azevedo-maia" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Daniel Azevedo</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.instagram.com/daniel.azevedo.maia" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/daniel-azevedo-maia" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/daniel-azevedo-maia" class="github"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Daniel Azevedo</h2>
+        <p><span class="typed" data-typed-items="Software Developer, Data Protection Officer"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size: 2.5rem; color: #007bff; text-align: center; margin-bottom: 20px;">Sobre</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Meu nome é <strong>Daniel Azevedo</strong>
+          e sou um desenvolvedor de software com <strong>4 anos de experiência</strong> na
+          área de Tecnologia da Informação. Minha atuação principal é no desenvolvimento back-end, com expertise em
+          <strong>Java</strong>, incluindo SE/Jakarta EE, JPA/Hibernate e o ecossistema Spring na construção de APIs
+          REST. Possuo, ainda,
+          experiência em Python e Django, bem como sólidos conhecimentos em Aprendizado de Máquina e Redes Neurais
+          Artificiais.
         </p>
-    </footer>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Ao longo da minha carreira, também adquiri
+          habilidades em
+          desenvolvimento front-end utilizando <strong>HTML, CSS, JavaScript, TypeScript, Angular</strong> e
+          <strong>Bootstrap</strong>, o que me permite
+          contribuir de forma abrangente em soluções full-stack.
+        </p>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Minha experiência inclui o uso de
+          ferramentas de testes de API, como <strong>Postman</strong> e <strong>Insomnia</strong>, e frameworks de
+          testes unitários como <strong>JUnit</strong>, garantindo a qualidade e a robustez das aplicações
+          desenvolvidas. Também sou
+          familiarizado com bancos de dados relacionais, como <strong>MySQL</strong> e <strong>PostgreSQL</strong>, e
+          bancos de dados NoSQL, como <strong>MongoDB</strong>,
+          o que me proporciona uma visão completa sobre o armazenamento e gerenciamento de dados em diferentes contextos
+          de aplicação.</p>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Ao longo da minha jornada profissional,
+          trabalhei em diversos projetos desafiadores, incluindo o
+          desenvolvimento de sistemas internos na <strong>Justiça Federal na Paraíba</strong>, onde contribuí para
+          iniciativas
+          inovadoras, como a primeira audiência judiciária do Brasil no Metaverso. No <strong>Grupo Elfa</strong>,
+          desenvolvi um portal
+          de administração utilizando tecnologias modernas como <strong>Angular</strong> e <strong>NestJS</strong>, além
+          de implementar funções serverless
+          com <strong>AWS Lambda</strong>. Na <strong>Datainfo</strong>, fui responsável por auxiliar no desenvolvimento
+          de um sistema monolítico legado
+          para a SEFAZ-PB, utilizando <strong>J2EE</strong> com arquitetura MVC, JSP, Servlets, e o servidor de
+          aplicação <strong>JBoss</strong>, além de
+          trabalhar com diversas tecnologias, como <strong>SQL</strong> e <strong>Eclipse</strong>, o que reforçou minha
+          habilidade em lidar com sistemas
+          legados e mantê-los operacionais.</p>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Atualmente, atuo como <strong>Diretor de
+            Desenvolvimento</strong> na Unidade Municipal de Tecnologia da Informação de João
+          Pessoa, onde lidero projetos de inovação tecnológica utilizando <strong>Apex, PL/SQL, Java, Spring</strong>,
+          entre outras
+          tecnologias com as quais tenho vasta experiência. Minha atuação inclui o gerenciamento e supervisão de equipes
+          na construção e manutenção de portais e sistemas, além de treinar equipes para garantir a conformidade com a
+          segurança da informação e a Lei Geral de Proteção de Dados (LGPD).</p>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Sou um entusiasta do aprendizado contínuo,
+          sempre buscando me atualizar sobre as melhores práticas do mercado
+          e me aprofundar em novas tecnologias. Tenho certificações relevantes na área de proteção de dados e segurança
+          da informação, incluindo o papel de Data Protection Officer (DPO) certificado pela EXIN, além de
+          certificações em aprendizado de máquina e inteligência artificial, que complementam minha formação técnica e
+          me permitem oferecer soluções inovadoras e seguras para problemas complexos.</p>
+
+        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Meu objetivo é contribuir com meu
+          conhecimento em desenvolvimento de software e proteção de dados,
+          participando de projetos que agreguem valor e ofereçam soluções tecnológicas eficientes, seguras e escaláveis.
+          Busco sempre oportunidades para aplicar minhas habilidades técnicas e crescer profissionalmente em um ambiente
+          colaborativo e dinâmico.</p>
+
+      </div><!-- End Section Title -->
+
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resumo Profissional</h2>
+        <p>Profissional de Tecnologia da Informação com experiência em desenvolvimento de software e proteção de dados.
+          Atuando em projetos inovadores e com foco na implementação de soluções tecnológicas eficientes, seguras e
+          escaláveis.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Perfil</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Daniel Azevedo de Oliveira Maia</h4>
+              <p><em>Desenvolvedor de software com vasta experiência em Java/Spring e Python/Django, especializado em
+                  proteção de dados. Atualmente, atuando como Diretor de Desenvolvimento na Unidade Municipal de
+                  Tecnologia da Informação de João Pessoa, liderando equipes e projetos inovadores.</em></p>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Educação</h3>
+            <div class="resume-item">
+              <h4>Bacharelado em Ciência da Computação</h4>
+              <h5>2020 - Presente</h5>
+              <p><em>Centro Universitário de João Pessoa (UNIPÊ), João Pessoa, PB</em></p>
+              <p>Monitor em disciplinas de Programação de Computadores e Programação Orientada a Objetos, desenvolvendo
+                habilidades em programação e ensino.</p>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Certificações</h3>
+            <div class="resume-item">
+              <ul>
+                <li>EXIN Privacy & Data Protection Essentials based on LGPD</li>
+                <li>EXIN Privacy and Data Protection Foundation</li>
+                <li>Information Security Foundation based on ISO IEC 27001</li>
+                <li>EXIN Privacy and Data Protection Practitioner</li>
+                <li>EXIN BCS Artificial Intelligence Essentials</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Cursos Concluídos</h3>
+            <div class="resume-item">
+              <ul>
+                <li>
+                  <strong>Testes Unitários com JUnit</strong> - AlgaWorks<br>
+                  <small>Verificação emitida em ago de 2024</small><br>
+                  <small>Código da credencial: X5D1I9IBWH</small><br>
+                  <a href="https://app.algaworks.com/certs/X5D1I9IBWH">Exibir credencial</a><br>
+                  <small>Competências: Testes unitários em Java com JUnit</small>
+                </li>
+                <li>
+                  <strong>Persistência com Spring Data + JPA</strong> - JDev Treinamentos<br>
+                  <small>Verificação emitida em abr de 2023</small><br>
+                  <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$mv8bvxG2">Exibir
+                    credencial</a><br>
+                  <small>Competências: Spring Data JPA, JPQL</small>
+                </li>
+                <li>
+                  <strong>Spring Boot REST API com JavaScript e Bootstrap</strong> - JDev Treinamentos<br>
+                  <small>Verificação emitida em abr de 2023</small><br>
+                  <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$qFGpGagO">Exibir
+                    credencial</a><br>
+                  <small>Competências: Spring Data JPA, JPQL</small>
+                </li>
+                <li>
+                  <strong>Spring Boot 3: desenvolva uma API Rest em Java</strong> - Alura<br>
+                  <small>Verificação emitida em jan de 2023</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/41854eca-8c9c-4b28-88aa-1bc7b3667742">Exibir
+                    credencial</a><br>
+                  <small>Competências: Spring Boot, REST APIs</small>
+                </li>
+                <li>
+                  <strong>Curso de Docker Completo - Do Zero ao Avançado</strong> - Udemy<br>
+                  <small>Verificação emitida em jul de 2024</small><br>
+                  <small>Código da credencial: UC-071a5401-0449-442c-8592-24de6b0d0718</small><br>
+                  <a href="https://www.udemy.com/certificate/UC-071a5401-0449-442c-8592-24de6b0d0718/">Exibir
+                    credencial</a><br>
+                  <small>Competências: criação de imagens, containers, dockerfiles, docker-compose, redes Docker, entre
+                    outros</small>
+                </li>
+                <li>
+                  <strong>Advanced Learning Algorithms</strong> - DeepLearning.AI/Coursera<br>
+                  <small>Verificação emitida em set de 2024</small><br>
+                  <small>Código da credencial: 7M0R86RJST7H</small><br>
+                  <a href="https://www.coursera.org/account/accomplishments/records/7M0R86RJST7H">Exibir
+                    credencial</a><br>
+                  <small>Competências: TensorFlow, fundamentos matemáticos das redes neurais artificiais, vetorização,
+                    funções de ativação, classificação multiclasse, viés e variância, árvores de decisão, métodos de
+                    ensemble e XGBoost</small>
+                </li>
+                <li>
+                  <strong>Supervised Machine Learning: Regression and Classification</strong> -
+                  DeepLearning.AI/Coursera<br>
+                  <small>Verificação emitida em jun de 2024</small><br>
+                  <small>Código da credencial: 9VMZDE97BMWY</small><br>
+                  <a href="https://www.coursera.org/account/accomplishments/verify/9VMZDE97BMWY">Exibir
+                    credencial</a><br>
+                  <small>Competências: Aprendizado de máquina, Regressão linear, Modelos de regressão, Classificação de
+                    dados, Algoritmos de aprendizado de máquina, Aprendizado supervisionado, Regressão logística</small>
+                </li>
+                <li>
+                  <strong>AI For Everyone</strong> - DeepLearning.AI<br>
+                  <small>Verificação emitida em jul de 2024</small><br>
+                  <a href="https://www.coursera.org/account/accomplishments/certificate/S6YCGFQLGEEH">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Intro to Machine Learning</strong> - Kaggle<br>
+                  <small>Verificação emitida em jun de 2024</small><br>
+                  <a href="https://www.kaggle.com/learn/certification/danielazevedomaia/intro-to-machine-learning">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>API com Django 3: Django Rest Framework</strong> - Alura<br>
+                  <small>Verificação emitida em fev de 2023</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/e4ef1f93-8aa3-4b22-82b4-c70ce66dfa52">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Django: templates e boas práticas</strong> - Alura<br>
+                  <small>Verificação emitida em fev de 2023</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/a68bf339-9d2e-4a2c-b8d9-750c6afbf59c">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Django: modelo, rotas e views</strong> - Alura<br>
+                  <small>Verificação emitida em out de 2022</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/74abea85-eeb7-41f4-9d00-ad1e316b5ced">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Arquitetura de computadores: por trás de como seu programa funciona</strong> - Alura<br>
+                  <small>Verificação emitida em set de 2022</small><br>
+                  <small>Código da credencial: 37b0a1ed-3481-478d-90f4-631418eba24d</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/37b0a1ed-3481-478d-90f4-631418eba24d">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>HTTP: Entendendo a web por baixo dos panos</strong> - Alura<br>
+                  <small>Verificação emitida em set de 2022</small><br>
+                  <small>Código da credencial: 9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d</small><br>
+                  <a href="https://cursos.alura.com.br/certificate/9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Modelagem de banco de dados: entidades, relacionamentos e atributos</strong> - Alura<br>
+                  <small>Verificação emitida em set de 2022</small><br>
+                  <small>Código da credencial: 8d3c1d9b-ab1c-4f82-a93f-ce26a39eba55</small><br>
+                  <a href="https://link-da-credencial">Exibir credencial</a>
+                </li>
+                <li>
+                  <strong>Certificado de autoridade: Java</strong> - DevMedia<br>
+                  <small>Verificação emitida em mar de 2022</small><br>
+                  <a href="https://www.devmedia.com.br/certificado/tecnologia/java/daniel-azevedo-de-oliveira-maia-1">Exibir
+                    credencial</a>
+                </li>
+                <li>
+                  <strong>Linguagem C, O Curso Definitivo - 46 horas</strong> - WR KITS<br>
+                  <small>Verificação emitida em mar de 2022</small>
+                </li>
+                <!-- Continue adding more certificates here -->
+              </ul>
+            </div><!-- End Resume Item -->
+
+
+            <h3 class="resume-title">Participação em eventos e Workshops</h3>
+            <div class="resume-item">
+              <ul>
+                <li>
+                  <strong>Certificado de Participação - FEPRO2023-Realizadores</strong> - Even3<br>
+                  <small>Verificação emitida em out de 2023</small><br>
+                  <small>Código da credencial: 80097908.5164824.7.0.8896984531742768</small><br>
+                  <small>Competências: JavaScript, Lógica de programação, Ciência da computação, Algoritmos</small>
+                </li>
+                <li>
+                  <strong>Certificado de Participação - Projetos 2023.1 Fábrica de Software do UBTech
+                    Office/UNIPÊ</strong> - Even3<br>
+                  <small>Verificação emitida em ago de 2023</small><br>
+                  <small>Código da credencial: 80796701.5164824.7.0.8691683531742768</small><br>
+                  <a href="https://link-da-credencial">Exibir credencial</a>
+                </li>
+                <li>
+                  <strong>Workshop de Desenvolvimento Back End</strong> - Fábrica de Software UBTech Office/Unipê<br>
+                  <small>Verificação emitida em mar de 2023</small><br>
+                  <small>Competências: Django, Django REST Framework, Python</small>
+                </li>
+                <!-- Continue adding more certificates here -->
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Projetos de extensão</h3>
+            <div class="resume-item">
+              <ul>
+                <li>
+                  <strong>Projeto de extensão Fábrica de Software</strong> - Fábrica de Software UBTech Office/Unipê<br>
+                  <a
+                    href="https://www.even3.com.br/documentos/imprimir?i=80796701.5164824.7.0.8691683531742768&cc=3c361fc5-833e-451c-bb4e-2abd35d5ad74">Exibir
+                    credencial</a><br>
+                  <small>Verificação emitida em abr de 2023</small>
+                </li>
+                <!-- Continue adding more certificates here -->
+              </ul>
+            </div><!-- End Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Experiência Profissional</h3>
+
+            <div class="resume-item">
+              <h4>Diretor de Desenvolvimento</h4>
+              <h5>Abril 2024 - Presente</h5>
+              <p><em>Unidade Municipal de Tecnologia da Informação, João Pessoa, PB</em></p>
+              <ul>
+                <li>Gerenciamento e liderança de equipes em projetos de inovação tecnológica utilizando Apex, PL/SQL,
+                  Java, e Spring.</li>
+                <li>Supervisão na construção de portais e sistemas, com ênfase em conformidade com a LGPD e proteção de
+                  dados.</li>
+                <li>Treinamento de equipes para proteção de dados, garantindo práticas seguras e eficientes.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Desenvolvedor Java</h4>
+              <h5>Dezembro 2023 - Maio 2024</h5>
+              <p><em>Datainfo, João Pessoa, PB</em></p>
+              <ul>
+                <li>Desenvolvimento de sistema monolítico legado para a SEFAZ-PB, utilizando J2EE com arquitetura MVC,
+                  JSP, Servlets, e JBoss.</li>
+                <li>Manutenção e aprimoramento de sistemas legados, trabalhando com SQL e Eclipse.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Estagiário de Desenvolvimento</h4>
+              <h5>Agosto 2023 - Dezembro 2023</h5>
+              <p><em>Grupo Elfa, João Pessoa, PB</em></p>
+              <ul>
+                <li>Desenvolveu um portal de administração utilizando Angular para o front-end e NestJS para o back-end.
+                </li>
+                <li>Implementou funções serverless com AWS Lambda e MongoDB para gerenciamento de dados.</li>
+                <li>Aprofundou conhecimentos em APIs, autenticação JWT, e práticas de segurança em HTTP.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Estagiário de Desenvolvimento e Inovação</h4>
+              <h5>Abril 2022 - Junho 2023</h5>
+              <p><em>Justiça Federal na Paraíba (JFPB), João Pessoa, PB</em></p>
+              <ul>
+                <li>Participou de iniciativas inovadoras, incluindo a primeira audiência judiciária do Brasil no
+                  Metaverso.</li>
+                <li>Desenvolveu robôs automatizados em Python com Selenium para processos na plataforma Processo
+                  Judicial Eletrônico (PJe).</li>
+                <li>Contribuiu para o desenvolvimento de sistemas internos utilizando Django e automação web em Java.
+                </li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Habilidades Técnicas</h3>
+            <div class="resume-item">
+              <ul>
+                <li>Desenvolvimento Back-End: Java (Jakarta EE, JPA/Hibernate, Spring, EJBs, JSP/Servlets, Thymeleaf),
+                  Python (Django), NestJS, NodeJS.</li>
+                <li>Desenvolvimento Front-End: HTML, CSS, JavaScript, TypeScript, Angular, Bootstrap, Angular CLI.</li>
+                <li>Bancos de Dados: SQL (MySQL, PostgreSQL), NoSQL (MongoDB).</li>
+                <li>Ferramentas e Práticas: Git, GitHub/GitLab, Docker, Maven, pip, Postman, Insomnia.</li>
+                <li>Gerenciamento de Projetos: Trello, Jira, Slack.</li>
+                <li>Machine Learning e IA: Ferramentas como Pandas e Numpy, conhecimentos em TensorFlow e aprendizado
+                  supervisionado.</li>
+                <li>Fundamentos: Matemática, Lógica, Estruturas de Dados.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contato</h2>
+        <p>Entre em contato para saber mais sobre meu trabalho ou para discutir novas oportunidades de colaboração.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <!-- Removed Address Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Telefone</h3>
+                  <p>+55 83 98888-7116</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>daniel.azevedo.maia@hotmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <!-- Removed Google Maps Iframe -->
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Seu Nome</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Seu Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Assunto</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Mensagem</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Carregando</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+
+                  <button type="submit">Enviar Mensagem</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
