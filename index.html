@@ -2,598 +2,1673 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Daniel Azevedo</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Daniel Azevedo | Desenvolvedor Back-end Java & Data Protection Officer
+  </title>
+  <meta name="description"
+    content="Desenvolvedor Back-end Java com experiência em Spring Boot, APIs REST, Docker e AWS. Data Protection Officer certificado." />
+  <meta name="keywords" content="Java, Spring Boot, APIs REST, Docker, AWS, Microservices, LGPD, DPO" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
+    rel="icon" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700&display=swap"
+    rel="stylesheet" />
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .certifications {
+      background: #f8fafc;
+      padding: 5rem 0;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cert-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      padding: 1.8rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cert-icon {
+      margin-bottom: 1.2rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .cert-logo {
+      max-height: 50px;
+      max-width: 100%;
+    }
+
+    .cert-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .cert-issuer {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .cert-period {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .cert-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .cert-actions {
+      margin-top: auto;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      padding: 0.5rem 1.2rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-card {
+        padding: 1.5rem;
+      }
+    }
+
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #4f46e5;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --light-gray: #e2e8f0;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --transition: all 0.3s ease;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --border-radius: 8px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    h2:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .text-center h2:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary);
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--border-radius);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Header Styles */
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+      border: 2px solid var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav ul li a:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+      color: white;
+      padding: 12rem 0 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      flex: 1;
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--light-gray);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .profile-photo {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid var(--primary);
+      box-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      display: block;
+      border-radius: var(--border-radius);
+    }
+
+    .about-text h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .highlight-card {
+      padding: 1.5rem;
+      background: white;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Experience Section */
+    .experience {
+      background: #f1f5f9;
+    }
+
+    .experience-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .experience-timeline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--primary);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      width: 50%;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      padding-right: 3rem;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      padding-left: 3rem;
+    }
+
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      top: 10px;
+    }
+
+    .timeline-item:nth-child(odd):before {
+      right: -10px;
+    }
+
+    .timeline-item:nth-child(even):before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .timeline-period {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-company {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .skill-category h3 {
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: var(--light-gray);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    /* Certifications */
+    .certifications {
+      background: #f1f5f9;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .cert-card {
+      padding: 1.5rem;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cert-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .cert-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-issuer {
+      color: var(--gray);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      min-width: 40px;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--border-radius);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-logo {
+      font-family: "Raleway", sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo span {
+      color: var(--primary);
+    }
+
+    .footer-logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+      border: 2px solid var(--primary);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--light-gray);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .profile-photo {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 992px) {
+
+      .about-content,
+      .contact-grid,
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-photo {
+        width: 250px;
+        height: 250px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 3rem !important;
+        text-align: left !important;
+      }
+
+      .timeline-item:nth-child(odd):before,
+      .timeline-item:nth-child(even):before {
+        left: -10px;
+        right: auto;
+      }
+
+      .experience-timeline:before {
+        left: 15px;
+      }
+
+      .hero-container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+      }
+
+      .hero-image {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .hero {
+        padding: 8rem 0 5rem;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .profile-photo {
+        width: 220px;
+        height: 220px;
+      }
+
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+        z-index: 999;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0;
+        padding: 0.5rem 1.5rem;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .contact-grid {
+        gap: 1.5rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+      }
+
+      .about-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
-<body class="index-page">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <!-- Espaço para sua foto no cabeçalho -->
+        <img src="eu.png" alt="Daniel Azevedo" class="logo-img" />
+        Daniel<span>Azevedo</span>
+      </a>
+      <button class="mobile-menu-btn">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#certifications">Certificações</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Daniel Azevedo</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.instagram.com/daniel.azevedo.maia" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/daniel-azevedo-maia" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/daniel-azevedo-maia" class="github"><i class="bi bi-github"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
-              class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
-      </ul>
-    </nav>
-
   </header>
 
-  <main class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1>Daniel <span>Azevedo</span></h1>
+        <div class="hero-subtitle">
+          Desenvolvedor Full Stack | APIs REST | Java | Python | IA & Machine
+          Learning | Cloud Computing | DPO
+        </div>
+        <p>
+          Movido pelo desafio de construir o futuro digital, dedico-me ao
+          desenvolvimento de software, criando soluções completas, robustas e
+          escaláveis. Minha atuação como desenvolvedor Full Stack é
+          complementada pela proficiência em tecnologias como Java (com o
+          ecossistema Spring) e Python, além de uma exploração contínua das
+          fronteiras da Inteligência Artificial, Machine Learning e Cloud
+          Computing. Atualmente, como Diretor de Desenvolvimento, lido com
+          projetos estratégicos de modernização tecnológica e, também na
+          função de Data Protection Officer, auxilio empresas e entes públicos
+          à conformidade da proteção de dados pessoais, promovendo uma cultura
+          de privacidade e segurança robusta.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn">Contato</a>
+          <a href="#experience" class="btn btn-outline">Experiência</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Espaço para sua foto principal -->
+        <img src="eu.png" alt="Daniel Azevedo" class="profile-photo" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Daniel Azevedo</h2>
-        <p><span class="typed" data-typed-items="Software Developer, Data Protection Officer"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sobre Mim</h2>
+        <p>Conheça minha trajetória profissional e principais competências</p>
       </div>
 
-    </section><!-- /Hero Section -->
+      <div class="about-content">
+        <div class="about-image">
+          <!-- Espaço para sua foto na seção "Sobre" -->
+          <img src="eu2.jpg" alt="Daniel Azevedo" />
+        </div>
+        <div class="about-text">
+          <h2>Desenvolvedor Back-end & DPO</h2>
+          <p>
+            Sou um desenvolvedor de software full-stack, especializado em Java
+            e ecossistema Spring. Minha experiência inclui criação de APIs
+            RESTful, seja em monólitos, seja em arquitetura de microsserviços,
+            e implementação de soluções com foco em Clean Code, Design
+            Patterns e princípios SOLID.
+          </p>
+          <p>
+            Atualmente, além de desenvolvedor, ocupo o cargo de Diretor de
+            Desenvolvimento no Município de João Pessoa, atuando em projetos
+            de inovação tecnológica.
+          </p>
+          <p>
+            Também atuo como Data Protection Officer (DPO), sendo responsável
+            pela conformidade com a LGPD/GDPR e outras regulamentações de
+            privacidade.
+          </p>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 style="font-size: 2.5rem; color: #007bff; text-align: center; margin-bottom: 20px;">Sobre</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Meu nome é <strong>Daniel Azevedo</strong>
-          e sou um desenvolvedor de software com <strong>4 anos de experiência</strong> na
-          área de Tecnologia da Informação. Minha atuação principal é no desenvolvimento back-end, com expertise em
-          <strong>Java</strong>, incluindo SE/Jakarta EE, JPA/Hibernate e o ecossistema Spring na construção de APIs
-          REST. Possuo, ainda,
-          experiência em Python e Django, bem como sólidos conhecimentos em Aprendizado de Máquina e Redes Neurais
-          Artificiais.
-        </p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Ao longo da minha carreira, também adquiri
-          habilidades em
-          desenvolvimento front-end utilizando <strong>HTML, CSS, JavaScript, TypeScript, Angular</strong> e
-          <strong>Bootstrap</strong>, o que me permite
-          contribuir de forma abrangente em soluções full-stack.
-        </p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Minha experiência inclui o uso de
-          ferramentas de testes de API, como <strong>Postman</strong> e <strong>Insomnia</strong>, e frameworks de
-          testes unitários como <strong>JUnit</strong>, garantindo a qualidade e a robustez das aplicações
-          desenvolvidas. Também sou
-          familiarizado com bancos de dados relacionais, como <strong>MySQL</strong> e <strong>PostgreSQL</strong>, e
-          bancos de dados NoSQL, como <strong>MongoDB</strong>,
-          o que me proporciona uma visão completa sobre o armazenamento e gerenciamento de dados em diferentes contextos
-          de aplicação.</p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Ao longo da minha jornada profissional,
-          trabalhei em diversos projetos desafiadores, incluindo o
-          desenvolvimento de sistemas internos na <strong>Justiça Federal na Paraíba</strong>, onde contribuí para
-          iniciativas
-          inovadoras, como a primeira audiência judiciária do Brasil no Metaverso. No <strong>Grupo Elfa</strong>,
-          desenvolvi um portal
-          de administração utilizando tecnologias modernas como <strong>Angular</strong> e <strong>NestJS</strong>, além
-          de implementar funções serverless
-          com <strong>AWS Lambda</strong>. Na <strong>Datainfo</strong>, fui responsável por auxiliar no desenvolvimento
-          de um sistema monolítico legado
-          para a SEFAZ-PB, utilizando <strong>J2EE</strong> com arquitetura MVC, JSP, Servlets, e o servidor de
-          aplicação <strong>JBoss</strong>, além de
-          trabalhar com diversas tecnologias, como <strong>SQL</strong> e <strong>Eclipse</strong>, o que reforçou minha
-          habilidade em lidar com sistemas
-          legados e mantê-los operacionais.</p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Atualmente, atuo como <strong>Diretor de
-            Desenvolvimento</strong> na Unidade Municipal de Tecnologia da Informação de João
-          Pessoa, onde lidero projetos de inovação tecnológica utilizando <strong>Apex, PL/SQL, Java, Spring</strong>,
-          entre outras
-          tecnologias com as quais tenho vasta experiência. Minha atuação inclui o gerenciamento e supervisão de equipes
-          na construção e manutenção de portais e sistemas, além de treinar equipes para garantir a conformidade com a
-          segurança da informação e a Lei Geral de Proteção de Dados (LGPD).</p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Sou um entusiasta do aprendizado contínuo,
-          sempre buscando me atualizar sobre as melhores práticas do mercado
-          e me aprofundar em novas tecnologias. Tenho certificações relevantes na área de proteção de dados e segurança
-          da informação, incluindo o papel de Data Protection Officer (DPO) certificado pela EXIN, além de
-          certificações em aprendizado de máquina e inteligência artificial, que complementam minha formação técnica e
-          me permitem oferecer soluções inovadoras e seguras para problemas complexos.</p>
-
-        <p style="font-size: 1.1rem; line-height: 1.6; text-align: justify;">Meu objetivo é contribuir com meu
-          conhecimento em desenvolvimento de software e proteção de dados,
-          participando de projetos que agreguem valor e ofereçam soluções tecnológicas eficientes, seguras e escaláveis.
-          Busco sempre oportunidades para aplicar minhas habilidades técnicas e crescer profissionalmente em um ambiente
-          colaborativo e dinâmico.</p>
-
-      </div><!-- End Section Title -->
-
-    </section><!-- /About Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resumo Profissional</h2>
-        <p>Profissional de Tecnologia da Informação com experiência em desenvolvimento de software e proteção de dados.
-          Atuando em projetos inovadores e com foco na implementação de soluções tecnológicas eficientes, seguras e
-          escaláveis.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Perfil</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Daniel Azevedo de Oliveira Maia</h4>
-              <p><em>Desenvolvedor de software com vasta experiência em Java/Spring e Python/Django, especializado em
-                  proteção de dados. Atualmente, atuando como Diretor de Desenvolvimento na Unidade Municipal de
-                  Tecnologia da Informação de João Pessoa, liderando equipes e projetos inovadores.</em></p>
-            </div><!-- End Resume Item -->
-
-            <h3 class="resume-title">Educação</h3>
-            <div class="resume-item">
-              <h4>Bacharelado em Ciência da Computação</h4>
-              <h5>2020 - Presente</h5>
-              <p><em>Centro Universitário de João Pessoa (UNIPÊ), João Pessoa, PB</em></p>
-              <p>Monitor em disciplinas de Programação de Computadores e Programação Orientada a Objetos, desenvolvendo
-                habilidades em programação e ensino.</p>
-            </div><!-- End Resume Item -->
-
-            <h3 class="resume-title">Certificações</h3>
-            <div class="resume-item">
-              <ul>
-                <li>EXIN Privacy & Data Protection Essentials based on LGPD</li>
-                <li>EXIN Privacy and Data Protection Foundation</li>
-                <li>Information Security Foundation based on ISO IEC 27001</li>
-                <li>EXIN Privacy and Data Protection Practitioner</li>
-                <li>EXIN BCS Artificial Intelligence Essentials</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <h3 class="resume-title">Cursos Concluídos</h3>
-            <div class="resume-item">
-              <ul>
-                <li>
-                  <strong>Testes Unitários com JUnit</strong> - AlgaWorks<br>
-                  <small>Verificação emitida em ago de 2024</small><br>
-                  <small>Código da credencial: X5D1I9IBWH</small><br>
-                  <a href="https://app.algaworks.com/certs/X5D1I9IBWH">Exibir credencial</a><br>
-                  <small>Competências: Testes unitários em Java com JUnit</small>
-                </li>
-                <li>
-                  <strong>Persistência com Spring Data + JPA</strong> - JDev Treinamentos<br>
-                  <small>Verificação emitida em abr de 2023</small><br>
-                  <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$mv8bvxG2">Exibir
-                    credencial</a><br>
-                  <small>Competências: Spring Data JPA, JPQL</small>
-                </li>
-                <li>
-                  <strong>Spring Boot REST API com JavaScript e Bootstrap</strong> - JDev Treinamentos<br>
-                  <small>Verificação emitida em abr de 2023</small><br>
-                  <a href="https://www.projetojavaweb.com/certificado-aluno/chave/$2a$10$qFGpGagO">Exibir
-                    credencial</a><br>
-                  <small>Competências: Spring Data JPA, JPQL</small>
-                </li>
-                <li>
-                  <strong>Spring Boot 3: desenvolva uma API Rest em Java</strong> - Alura<br>
-                  <small>Verificação emitida em jan de 2023</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/41854eca-8c9c-4b28-88aa-1bc7b3667742">Exibir
-                    credencial</a><br>
-                  <small>Competências: Spring Boot, REST APIs</small>
-                </li>
-                <li>
-                  <strong>Curso de Docker Completo - Do Zero ao Avançado</strong> - Udemy<br>
-                  <small>Verificação emitida em jul de 2024</small><br>
-                  <small>Código da credencial: UC-071a5401-0449-442c-8592-24de6b0d0718</small><br>
-                  <a href="https://www.udemy.com/certificate/UC-071a5401-0449-442c-8592-24de6b0d0718/">Exibir
-                    credencial</a><br>
-                  <small>Competências: criação de imagens, containers, dockerfiles, docker-compose, redes Docker, entre
-                    outros</small>
-                </li>
-                <li>
-                  <strong>Advanced Learning Algorithms</strong> - DeepLearning.AI/Coursera<br>
-                  <small>Verificação emitida em set de 2024</small><br>
-                  <small>Código da credencial: 7M0R86RJST7H</small><br>
-                  <a href="https://www.coursera.org/account/accomplishments/records/7M0R86RJST7H">Exibir
-                    credencial</a><br>
-                  <small>Competências: TensorFlow, fundamentos matemáticos das redes neurais artificiais, vetorização,
-                    funções de ativação, classificação multiclasse, viés e variância, árvores de decisão, métodos de
-                    ensemble e XGBoost</small>
-                </li>
-                <li>
-                  <strong>Supervised Machine Learning: Regression and Classification</strong> -
-                  DeepLearning.AI/Coursera<br>
-                  <small>Verificação emitida em jun de 2024</small><br>
-                  <small>Código da credencial: 9VMZDE97BMWY</small><br>
-                  <a href="https://www.coursera.org/account/accomplishments/verify/9VMZDE97BMWY">Exibir
-                    credencial</a><br>
-                  <small>Competências: Aprendizado de máquina, Regressão linear, Modelos de regressão, Classificação de
-                    dados, Algoritmos de aprendizado de máquina, Aprendizado supervisionado, Regressão logística</small>
-                </li>
-                <li>
-                  <strong>AI For Everyone</strong> - DeepLearning.AI<br>
-                  <small>Verificação emitida em jul de 2024</small><br>
-                  <a href="https://www.coursera.org/account/accomplishments/certificate/S6YCGFQLGEEH">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Intro to Machine Learning</strong> - Kaggle<br>
-                  <small>Verificação emitida em jun de 2024</small><br>
-                  <a href="https://www.kaggle.com/learn/certification/danielazevedomaia/intro-to-machine-learning">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>API com Django 3: Django Rest Framework</strong> - Alura<br>
-                  <small>Verificação emitida em fev de 2023</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/e4ef1f93-8aa3-4b22-82b4-c70ce66dfa52">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Django: templates e boas práticas</strong> - Alura<br>
-                  <small>Verificação emitida em fev de 2023</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/a68bf339-9d2e-4a2c-b8d9-750c6afbf59c">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Django: modelo, rotas e views</strong> - Alura<br>
-                  <small>Verificação emitida em out de 2022</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/74abea85-eeb7-41f4-9d00-ad1e316b5ced">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Arquitetura de computadores: por trás de como seu programa funciona</strong> - Alura<br>
-                  <small>Verificação emitida em set de 2022</small><br>
-                  <small>Código da credencial: 37b0a1ed-3481-478d-90f4-631418eba24d</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/37b0a1ed-3481-478d-90f4-631418eba24d">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>HTTP: Entendendo a web por baixo dos panos</strong> - Alura<br>
-                  <small>Verificação emitida em set de 2022</small><br>
-                  <small>Código da credencial: 9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d</small><br>
-                  <a href="https://cursos.alura.com.br/certificate/9ad39ec2-4ff6-4eaa-8fad-1a71067fe81d">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Modelagem de banco de dados: entidades, relacionamentos e atributos</strong> - Alura<br>
-                  <small>Verificação emitida em set de 2022</small><br>
-                  <small>Código da credencial: 8d3c1d9b-ab1c-4f82-a93f-ce26a39eba55</small><br>
-                  <a href="https://link-da-credencial">Exibir credencial</a>
-                </li>
-                <li>
-                  <strong>Certificado de autoridade: Java</strong> - DevMedia<br>
-                  <small>Verificação emitida em mar de 2022</small><br>
-                  <a href="https://www.devmedia.com.br/certificado/tecnologia/java/daniel-azevedo-de-oliveira-maia-1">Exibir
-                    credencial</a>
-                </li>
-                <li>
-                  <strong>Linguagem C, O Curso Definitivo - 46 horas</strong> - WR KITS<br>
-                  <small>Verificação emitida em mar de 2022</small>
-                </li>
-                <!-- Continue adding more certificates here -->
-              </ul>
-            </div><!-- End Resume Item -->
-
-
-            <h3 class="resume-title">Participação em eventos e Workshops</h3>
-            <div class="resume-item">
-              <ul>
-                <li>
-                  <strong>Certificado de Participação - FEPRO2023-Realizadores</strong> - Even3<br>
-                  <small>Verificação emitida em out de 2023</small><br>
-                  <small>Código da credencial: 80097908.5164824.7.0.8896984531742768</small><br>
-                  <small>Competências: JavaScript, Lógica de programação, Ciência da computação, Algoritmos</small>
-                </li>
-                <li>
-                  <strong>Certificado de Participação - Projetos 2023.1 Fábrica de Software do UBTech
-                    Office/UNIPÊ</strong> - Even3<br>
-                  <small>Verificação emitida em ago de 2023</small><br>
-                  <small>Código da credencial: 80796701.5164824.7.0.8691683531742768</small><br>
-                  <a href="https://link-da-credencial">Exibir credencial</a>
-                </li>
-                <li>
-                  <strong>Workshop de Desenvolvimento Back End</strong> - Fábrica de Software UBTech Office/Unipê<br>
-                  <small>Verificação emitida em mar de 2023</small><br>
-                  <small>Competências: Django, Django REST Framework, Python</small>
-                </li>
-                <!-- Continue adding more certificates here -->
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <h3 class="resume-title">Projetos de extensão</h3>
-            <div class="resume-item">
-              <ul>
-                <li>
-                  <strong>Projeto de extensão Fábrica de Software</strong> - Fábrica de Software UBTech Office/Unipê<br>
-                  <a
-                    href="https://www.even3.com.br/documentos/imprimir?i=80796701.5164824.7.0.8691683531742768&cc=3c361fc5-833e-451c-bb4e-2abd35d5ad74">Exibir
-                    credencial</a><br>
-                  <small>Verificação emitida em abr de 2023</small>
-                </li>
-                <!-- Continue adding more certificates here -->
-              </ul>
-            </div><!-- End Resume Item -->
-
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <h3>+5 anos</h3>
+              <p>Experiência em desenvolvimento de software</p>
+            </div>
+            <div class="highlight-card">
+              <h3>20+</h3>
+              <p>Projetos técnicos concluídos</p>
+            </div>
+            <div class="highlight-card">
+              <h3>7</h3>
+              <p>Certificações profissionais em TI e proteção de dados</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Experiência Profissional</h3>
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experiência Profissional</h2>
+        <p>Minha jornada profissional em desenvolvimento e liderança</p>
+      </div>
 
-            <div class="resume-item">
-              <h4>Diretor de Desenvolvimento</h4>
-              <h5>Abril 2024 - Presente</h5>
-              <p><em>Unidade Municipal de Tecnologia da Informação, João Pessoa, PB</em></p>
-              <ul>
-                <li>Gerenciamento e liderança de equipes em projetos de inovação tecnológica utilizando Apex, PL/SQL,
-                  Java, e Spring.</li>
-                <li>Supervisão na construção de portais e sistemas, com ênfase em conformidade com a LGPD e proteção de
-                  dados.</li>
-                <li>Treinamento de equipes para proteção de dados, garantindo práticas seguras e eficientes.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Desenvolvedor Java</h4>
-              <h5>Dezembro 2023 - Maio 2024</h5>
-              <p><em>Datainfo, João Pessoa, PB</em></p>
-              <ul>
-                <li>Desenvolvimento de sistema monolítico legado para a SEFAZ-PB, utilizando J2EE com arquitetura MVC,
-                  JSP, Servlets, e JBoss.</li>
-                <li>Manutenção e aprimoramento de sistemas legados, trabalhando com SQL e Eclipse.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Estagiário de Desenvolvimento</h4>
-              <h5>Agosto 2023 - Dezembro 2023</h5>
-              <p><em>Grupo Elfa, João Pessoa, PB</em></p>
-              <ul>
-                <li>Desenvolveu um portal de administração utilizando Angular para o front-end e NestJS para o back-end.
-                </li>
-                <li>Implementou funções serverless com AWS Lambda e MongoDB para gerenciamento de dados.</li>
-                <li>Aprofundou conhecimentos em APIs, autenticação JWT, e práticas de segurança em HTTP.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Estagiário de Desenvolvimento e Inovação</h4>
-              <h5>Abril 2022 - Junho 2023</h5>
-              <p><em>Justiça Federal na Paraíba (JFPB), João Pessoa, PB</em></p>
-              <ul>
-                <li>Participou de iniciativas inovadoras, incluindo a primeira audiência judiciária do Brasil no
-                  Metaverso.</li>
-                <li>Desenvolveu robôs automatizados em Python com Selenium para processos na plataforma Processo
-                  Judicial Eletrônico (PJe).</li>
-                <li>Contribuiu para o desenvolvimento de sistemas internos utilizando Django e automação web em Java.
-                </li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <h3 class="resume-title">Habilidades Técnicas</h3>
-            <div class="resume-item">
-              <ul>
-                <li>Desenvolvimento Back-End: Java (Jakarta EE, JPA/Hibernate, Spring, EJBs, JSP/Servlets, Thymeleaf),
-                  Python (Django), NestJS, NodeJS.</li>
-                <li>Desenvolvimento Front-End: HTML, CSS, JavaScript, TypeScript, Angular, Bootstrap, Angular CLI.</li>
-                <li>Bancos de Dados: SQL (MySQL, PostgreSQL), NoSQL (MongoDB).</li>
-                <li>Ferramentas e Práticas: Git, GitHub/GitLab, Docker, Maven, pip, Postman, Insomnia.</li>
-                <li>Gerenciamento de Projetos: Trello, Jira, Slack.</li>
-                <li>Machine Learning e IA: Ferramentas como Pandas e Numpy, conhecimentos em TensorFlow e aprendizado
-                  supervisionado.</li>
-                <li>Fundamentos: Matemática, Lógica, Estruturas de Dados.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+      <div class="experience-timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-period">Abr 2024 - Presente</div>
+            <div class="timeline-company">
+              Prefeitura Municipal de João Pessoa
+            </div>
+            <h3>Diretor de Desenvolvimento</h3>
+            <p>
+              Liderança de iniciativas estratégicas para inovar e otimizar os
+              serviços tecnológicos da cidade. Implementação de soluções
+              eficazes que atendam às necessidades de modernização e
+              eficiência, promovendo infraestrutura tecnológica robusta e
+              acessível.
+            </p>
           </div>
-
         </div>
 
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-period">Dez 2023 - Abr 2024</div>
+            <div class="timeline-company">Datainfo</div>
+            <h3>Desenvolvedor Java</h3>
+            <p>
+              Desenvolvimento e manutenção de sistema monolítico na SEFAZ-PB,
+              utilizando J2EE com arquitetura MVC, JSP e Servlets, com
+              servidor de aplicação JBoss e EJB para lógica de negócios.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-period">Jun 2023 - Jan 2024</div>
+            <div class="timeline-company">Grupo Elfa</div>
+            <h3>Desenvolvedor Full Stack (Estágio)</h3>
+            <p>
+              Desenvolvimento de portal de administração com Angular
+              (front-end) e NestJS (back-end). Implementação de Serverless
+              Framework com AWS Lambda e MongoDB para persistência de dados.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-period">Jul 2021 - Presente</div>
+            <div class="timeline-company">
+              Prefeitura Municipal de João Pessoa
+            </div>
+            <h3>Data Protection Officer (DPO)</h3>
+            <p>
+              Responsável por auxiliar o município no processo de conformidade
+              com a LGPD e outras regulamentações de privacidade. Ponto de
+              contato entre o município, titulares de dados e autoridades de
+              proteção de dados.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-period">Mar 2022 - Jun 2023</div>
+            <div class="timeline-company">Justiça Federal na Paraíba</div>
+            <h3>Desenvolvedor Python | Django</h3>
+            <p>
+              Participação em atividades relacionadas à realização de
+              audiências no Metaverso. Desenvolvimento de sistemas internos
+              com Django Framework e robôs automatizados em Python com
+              Selenium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Habilidades Técnicas</h2>
+        <p>Minhas competências em desenvolvimento e tecnologia</p>
       </div>
 
-    </section><!-- /Resume Section -->
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="bi bi-code-slash"></i> Back-end</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Java</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Spring Boot</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>API REST</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Python</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-layout-wtf"></i> Front-end</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Angular</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>JavaScript/TypeScript</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>HTML/CSS</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-database"></i> Banco de Dados</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>PostgreSQL</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>MySQL</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>MongoDB</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-tools"></i> Ferramentas & DevOps</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Docker</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>AWS</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Git</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+<section id="certifications" class="section certifications">
+  <div class="container">
+    <!-- Certificações Oficiais -->
+    <div class="section-title">
+      <h2>Certificações Oficiais</h2>
+      <p>Credenciais profissionais com reconhecimento de mercado</p>
+    </div>
+    
+    <div class="certs-grid">
+      <!-- AWS Certified Cloud Practitioner -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="cert-logo">
+        </div>
+        <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
+        <div class="cert-issuer">Amazon Web Services (AWS)</div>
+        <div class="cert-period">
+          Emitido em out/2024 · Expira em out/2027
+        </div>
+        <p>
+          Valida compreensão dos principais serviços AWS, práticas de segurança e otimização de custos em cloud.
+        </p>
+        <div class="cert-actions">
+          <a href="https://www.credly.com/badges/07679ea8-e36e-4592-8fc4-b63850ef9a78/linked_in_profile" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+
+      <!-- EXIN BCS Artificial Intelligence Essentials -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="exin.png" alt="EXIN" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Artificial Intelligence Essentials</h3>
+        <div class="cert-issuer">EXIN BCS</div>
+        <div class="cert-period">Verificação emitida em jul/2024</div>
+        <p>
+          Fundamentos de IA e aplicações práticas em contextos empresariais.
+        </p>
+        <div class="cert-actions">
+          <a href="https://mylogin.exin.nl/?Script=DownloadCertificate&CertificateID=1962231&Guid=248D25A2-B18E-4B9C-96D1-240C01678433" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+
+      <!-- Proficiência em língua inglesa -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/800px-Flag_of_Brazil.svg.png" alt="IFRN" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Proficiência em Língua Inglesa</h3>
+        <div class="cert-issuer">
+          Instituto Federal do Rio Grande do Norte (IFRN)
+        </div>
+        <div class="cert-period">Verificação emitida em abr/2025</div>
+        <p>
+          Certificado de proficiência em língua inglesa emitido por instituição federal de ensino.
+        </p>
+        <div class="cert-actions">
+          <a href="https://inscricoes.funcern.org/certificados/certificado/8C3F7819CB/" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formações Especializadas -->
+    <div class="section-title" style="margin-top: 4rem">
+      <h2>Formações Especializadas</h2>
+      <p>Cursos avançados com certificação</p>
+    </div>
+    
+    <div class="certs-grid">
+      <!-- Machine Learning Specialization -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="deeplearningai.avif" alt="DeepLearning.AI" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Machine Learning Specialization</h3>
+        <div class="cert-issuer">DeepLearning.AI</div>
+        <div class="cert-period">Verificação emitida em out/2024</div>
+        <p>
+          Programa completo de Machine Learning cobrindo técnicas supervisionadas e não supervisionadas.
+        </p>
+        <div class="cert-actions">
+          <a href="https://www.coursera.org/account/accomplishments/specialization/7RD4YAI7D77P" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+
+      <!-- Especialista Java -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="algaworks.jpg" alt="AlgaWorks" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Especialista Java</h3>
+        <div class="cert-issuer">AlgaWorks</div>
+        <div class="cert-period">Verificação emitida em mar/2025</div>
+        <p>
+          Formação completa em desenvolvimento Java com boas práticas e arquitetura limpa.
+        </p>
+        <div class="cert-actions">
+          <a href="https://app.algaworks.com/certs/DO49SF2SN7" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+      
+      <!-- Unsupervised Learning -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="deeplearningai.avif" alt="DeepLearning.AI" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Unsupervised Learning</h3>
+        <div class="cert-issuer">DeepLearning.AI</div>
+        <div class="cert-period">Verificação emitida em out/2024</div>
+        <p>
+          Técnicas de aprendizado não supervisionado, sistemas de recomendação e aprendizado por reforço.
+        </p>
+        <div class="cert-actions">
+          <a href="https://www.coursera.org/account/accomplishments/verify/HPB3SJIPEE9I" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+      
+      <!-- Advanced Learning Algorithms -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="deeplearningai.avif" alt="DeepLearning.AI" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Advanced Learning Algorithms</h3>
+        <div class="cert-issuer">DeepLearning.AI</div>
+        <div class="cert-period">Verificação emitida em set/2024</div>
+        <p>
+          Algoritmos avançados de ML, redes neurais e técnicas de classificação.
+        </p>
+        <div class="cert-actions">
+          <a href="https://www.coursera.org/account/accomplishments/records/7M0R86RJST7H" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+      
+      <!-- Supervised Machine Learning -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="deeplearningai.avif" alt="DeepLearning.AI" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Supervised Machine Learning</h3>
+        <div class="cert-issuer">DeepLearning.AI</div>
+        <div class="cert-period">Verificação emitida em jun/2024</div>
+        <p>
+          Fundamentos de aprendizado supervisionado: regressão linear, regressão logística e classificação.
+        </p>
+        <div class="cert-actions">
+          <a href="https://www.coursera.org/account/accomplishments/verify/9VMZDE97BMWY" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+      
+      <!-- Kaggle - Intro to Machine Learning -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="kaggle.png" alt="Kaggle" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Intro to Machine Learning</h3>
+        <div class="cert-issuer">Kaggle</div>
+        <div class="cert-period">Verificação emitida em jun/2024</div>
+        <p>
+          Fundamentos de machine learning, algoritmos e aplicações práticas.
+        </p>
+        <div class="cert-actions">
+          <a href="#" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursos Complementares -->
+    <div class="section-title" style="margin-top: 4rem">
+      <h2>Cursos Complementares</h2>
+      <p>Conhecimentos técnicos adicionais</p>
+    </div>
+    
+    <div class="certs-grid">
+      <!-- API REST e Spring Boot -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy" class="cert-logo">
+        </div>
+        <h3 class="cert-title">API REST e Spring Boot</h3>
+        <div class="cert-issuer">Udemy</div>
+        <div class="cert-period">Verificação emitida em dez/2024</div>
+        <p>
+          Desenvolvimento de APIs REST com Spring Boot e autenticação JWT.
+        </p>
+        <div class="cert-actions">
+          <a href="#" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+
+      <!-- Docker completo -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Docker completo</h3>
+        <div class="cert-issuer">Udemy</div>
+        <div class="cert-period">Verificação emitida em jul/2024</div>
+        <p>
+          Curso completo de Docker desde conceitos básicos até implementações avançadas.
+        </p>
+        <div class="cert-actions">
+          <a href="#" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+
+      <!-- Testes Unitários com JUnit -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Testes Unitários com JUnit</h3>
+        <div class="cert-issuer">AlgaWorks</div>
+        <div class="cert-period">Verificação emitida em ago/2024</div>
+        <p>
+          Implementação de testes unitários eficientes em Java com JUnit.
+        </p>
+        <div class="cert-actions">
+          <a href="https://app.algaworks.com/certs/X5D1I9IBWH" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+      
+      <!-- Projeto de extensão Fábrica de Software -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <img src="unipe.png" alt="UNIPÊ" class="cert-logo">
+        </div>
+        <h3 class="cert-title">Projeto de Extensão Fábrica de Software</h3>
+        <div class="cert-issuer">UNIPÊ</div>
+        <div class="cert-period">Verificação emitida em abr/2023</div>
+        <p>
+          Participação em projeto de extensão focado em desenvolvimento de software.
+        </p>
+        <div class="cert-actions">
+          <a href="#" class="btn btn-outline" target="_blank">Ver Credencial</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-top: 3rem">
+      <a href="#" class="btn">Ver todas as certificações e cursos</a>
+    </div>
+  </div>
+</section>
 
 
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Entre em Contato</h2>
+        <p>Estou disponível para oportunidades e parcerias</p>
+      </div>
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contato</h2>
-        <p>Entre em contato para saber mais sobre meu trabalho ou para discutir novas oportunidades de colaboração.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <!-- Removed Address Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Telefone</h3>
-                  <p>+55 83 98888-7116</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email</h3>
-                  <p>daniel.azevedo.maia@hotmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <!-- Removed Google Maps Iframe -->
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <h3>Localização</h3>
+              <p>João Pessoa, Paraíba, Brasil</p>
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p>daniel.azevedo.maia@hotmail.com</p>
+            </div>
+          </div>
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Seu Nome</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div>
+              <h3>Telefone</h3>
+              <p>+55 83 98888-7116</p>
+            </div>
+          </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Seu Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Assunto</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Mensagem</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Carregando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-
-                  <button type="submit">Enviar Mensagem</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>linkedin.com/in/daniel-azevedo-maia</p>
+            </div>
+          </div>
         </div>
 
-      </div>
-
-    </section><!-- /Contact Section -->
-
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
-        </p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <input type="text" placeholder="Seu Nome" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Seu Email" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Assunto" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+          </form>
+        </div>
       </div>
     </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">
+            <img src="eu.png" alt="Daniel Azevedo" class="footer-logo-img" />
+            Daniel<span>Azevedo</span>
+          </div>
+          <p>
+            Desenvolvedor Full Stack com sólida experiência em desenvolvimento
+            de software, incluindo projetos com Inteligência
+            Artificial/Machine Learning e Cloud Computing. Data Protection
+            Officer.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/daniel-azevedo-maia/" class="social-link"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/daniel-azevedo-maia" class="social-link"><i class="bi bi-github"></i></a>
+            <a href="https://instagram.com/daniel.azevedo.maia" class="social-link"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Links Rápidos</h3>
+          <ul style="list-style: none">
+            <li style="margin-bottom: 0.5rem">
+              <a href="#hero" style="color: white">Início</a>
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <a href="#about" style="color: white">Sobre</a>
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <a href="#experience" style="color: white">Experiência</a>
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <a href="#skills" style="color: white">Habilidades</a>
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <a href="#contact" style="color: white">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2025 Daniel Azevedo. Todos os direitos reservados.
+      </div>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <script>
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const navMenu = document.querySelector("nav ul");
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    mobileMenuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: "smooth",
+          });
 
+          navMenu.classList.remove("show");
+        }
+      });
+    });
+
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll(
+        ".timeline-item, .skill-category, .cert-card, .highlight-card, .contact-item"
+      );
+
+      elements.forEach((element) => {
+        const position = element.getBoundingClientRect();
+
+        if (position.top < window.innerHeight * 0.8) {
+          element.style.opacity = "1";
+          element.style.transform = "translateY(0)";
+        }
+      });
+    };
+
+    document
+      .querySelectorAll(
+        ".timeline-item, .skill-category, .cert-card, .highlight-card, .contact-item"
+      )
+      .forEach((element) => {
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+      });
+
+    window.addEventListener("scroll", animateOnScroll);
+    window.addEventListener("load", animateOnScroll);
+  </script>
 </body>
 
 </html>
