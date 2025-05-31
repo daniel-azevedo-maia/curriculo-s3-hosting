@@ -1,4 +1,4 @@
-# 📅 Desafio “30 Projetos na Nuvem” — Projeto 1: Site Estático no Amazon S3
+# 📅 Desafio “50 Projetos na Nuvem” — Projeto 1: Site Estático no Amazon S3
 
 Hoje dou o pontapé inicial de uma série com **50 projetos práticos de Cloud Computing**, indo do básico ao avançado.
 
