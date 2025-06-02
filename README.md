@@ -1,44 +1,22 @@
-# 📅 Desafio “50DaysOfCloud” — Projeto 1: Site Estático no Amazon S3:
+# 50DaysOfCloud — Projeto 01/50
 
-Hoje dou o pontapé inicial de uma série com **50 projetos práticos de Cloud Computing**, indo do básico ao avançado.
+## 🌐 Site Estático no Amazon S3
 
-A ideia é explorar serviços da **AWS**, **GCP** e **Azure**, sempre dentro do **Free Tier** (ou o mais próximo possível disso), construindo **soluções reais**, comentando cada **decisão**, **tecnologia escolhida** e o **impacto prático** de cada escolha.
-
----
-
-## 🚀 A cada projeto, explico:
-
-1️⃣ O que construí  
-2️⃣ Por que escolhi cada serviço  
-3️⃣ Os ganhos obtidos — seja em custo, performance, simplicidade, escalabilidade ou segurança  
+Este é o repositório do **Projeto 01** do desafio #50DaysOfCloud. Neste projeto, hospedei meu currículo como um site estático na AWS utilizando o Amazon S3, e posteriormente automatizei o deploy com GitHub Actions (CI/CD).
 
 ---
 
-## 🌐 Projeto 1 — Site Estático no Amazon S3
+## 🔹 Etapa 1 — Criação do Bucket S3
 
-Neste projeto, hospedei um site simples, estático — **meu currículo** — usando o Amazon S3 com Static Website Hosting e algumas configurações essenciais da AWS.
+- Nome do bucket: `daniel-azevedo-resume-tech`
+- Nomes de buckets no S3 são globais e únicos (visíveis publicamente), portanto usei letras minúsculas e nome criativo.
+- Desativei o **bloqueio de acesso público**, permitindo acesso por URL.
+- **ACLs** não foram ativadas (obsoletas), utilizei política de bucket moderna e segura.
+- Ativei o **versionamento** para manter o histórico de versões.
+- Configurei o **Static Website Hosting** com `index.html` como documento inicial.
+- Para logs, criei um segundo bucket exclusivo: `daniel-azevedo-resume-tech-logs`.
 
-### 💡 Por que usei `us-east-1` em vez de `sa-east-1`?
-
-- 💰 **Preço**: us-east-1 continua sendo a região **mais barata** da AWS  
-- 📚 **Documentação**: a maioria dos tutoriais e exemplos da AWS assume essa região como padrão  
-- 📶 **Latência**: para um site leve como esse, a diferença de milissegundos é **irrelevante**  
-- ➡️ **Trade-off**: economizo mais com **impacto mínimo** — o projeto é para fins didáticos.
-
----
-
-## ⚙️ Passo a passo que segui:
-
-- Criei o bucket `daniel-azevedo-resume-tech` (nomes de bucket são globais e únicos — usei minúsculas e sem espaços).
-- Desativei o **bloqueio de acesso público**, permitindo que qualquer pessoa visualize o site pela URL pública.
-- **ACLs desativadas** — uso de **bucket policy moderna**, como a AWS recomenda.
-- Ativei o **versionamento** para manter histórico automático de versões dos arquivos.
-- Configurei o **Static Website Hosting**, com `index.html` como página inicial.
-- Criei um segundo bucket (`daniel-azevedo-resume-tech-logs`) para armazenar **logs de acesso** — **sem acesso público e sem versionamento**.
-
----
-
-## 🔐 Bucket Policy para leitura pública
+### 🔐 Política do bucket para leitura pública:
 
 ```json
 {
@@ -54,35 +32,78 @@ Neste projeto, hospedei um site simples, estático — **meu currículo** — us
 }
 ```
 
----
-
-## ☁️ Upload realizado
-
-Fiz upload do `index.html`, imagens e demais arquivos estáticos do site.
-
-✅ **Endpoint público gerado**:  
-http://daniel-azevedo-resume-tech.s3-website-us-east-1.amazonaws.com/
+- Fiz upload do `index.html`, imagens e arquivos do site.
+- Endpoint gerado: (removido por segurança/custos).
 
 ---
 
-## 💸 AWS Budget
+## 💡 Por que usei a região us-east-1?
 
-Criei um **AWS Budget** chamado `FreeTier-Control`, com limite de **US$ 1**.  
-Assim, recebo **alertas por e-mail** se sair da camada gratuita.
+- **Preço**: mais barata que `sa-east-1`.
+- **Documentação**: maioria dos tutoriais assume `us-east-1` como padrão.
+- **Latência**: irrelevante para site leve.
+- **Trade-off**: aceito latência mínima em troca de economia.
 
 ---
 
-## 🧠 Fatos rápidos sobre o Amazon S3
+## 🧠 Fatos rápidos sobre S3
 
-- Buckets **não têm pastas reais** — são apenas **prefixos no nome** dos objetos.
-- Exemplo: `img/foto.png` é só um nome, não uma pasta real.
+- Buckets não têm pastas reais — apenas prefixos.
+- Ex: `img/foto.png` é só um nome.
 - Cada objeto pode ter até **5 TB**.
-- O número de objetos por bucket é **virtualmente ilimitado**.
-- Regras de nomes de bucket: letras minúsculas, hífens, entre 3-63 caracteres, sem espaços.
+- Número de objetos por bucket: **ilimitado**.
 
 ---
 
-## 🔗 Me acompanhe no LinkedIn
+## 🔹 Etapa 2 — AWS Budget
 
-[https://www.linkedin.com/in/daniel-azevedo-maia/](https://www.linkedin.com/in/daniel-azevedo-maia/)
+- Criei um orçamento (budget) chamado `FreeTier-Control`, com **limite de US$ 1**, para receber alertas caso ultrapasse o Free Tier.
 
+---
+
+## 🔹 Etapa 3 — CI/CD com GitHub Actions
+
+Objetivo: **automatizar deploy no S3 sempre que houver push na branch `main`**.
+
+### 📌 IAM User
+
+- Criei um usuário IAM para uso exclusivo do GitHub Actions.
+- Marquei como "Serviço de terceiros".
+- Anexei a política `AmazonS3FullAccess` (fins didáticos — poderia ser mais restrita).
+
+### 🔐 Secrets no GitHub
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_REGION`
+- `S3_BUCKET_NAME`
+
+### ⚙️ Arquivo `.github/workflows/deploy.yml`
+
+- Aciona no push na `main`
+- Faz checkout do código
+- Instala AWS CLI
+- Autentica com secrets
+- Executa `aws s3 sync` com o bucket
+
+---
+
+## ✅ Resultado
+
+- Toda vez que faço push no repositório, o site é **atualizado automaticamente** no S3.
+- O GitHub cria uma **VM temporária**, instala tudo e faz o deploy em segundos.
+- Posso acompanhar tudo em tempo real pela aba “Actions”.
+
+---
+
+## 📌 Conclusão
+
+Projeto simples, gratuito e essencial como ponto de partida para o mundo da cloud com AWS. 
+
+Pronto para o próximo desafio do #50DaysOfCloud!
+
+---
+
+## 📎 Tags
+
+`#50DaysOfCloud` `#AWS` `#S3` `#StaticWebsiteHosting` `#CI/CD` `#GitHubActions` `#CloudComputing`
